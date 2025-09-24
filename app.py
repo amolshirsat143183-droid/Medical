@@ -56,3 +56,4 @@ else:
     if st.button("Predict Single"):
         prediction = model.predict(input_data)
         st.success(f"Estimated Insurance Cost: ${prediction[0]:.2f}")
+
