@@ -7,7 +7,7 @@ model = joblib.load("model.pkl")
 
 st.title("Medical Insurance Cost Predictor")
 # Display an image (local file or URL)
-st.image("Insu.jpg", caption="BK Health Insurance",  use_column_width=True)
+st.image("Insu.jpg", caption="BK Health Insurance",  use_container_width=True)
 
 # Option 1: Upload CSV
 uploaded_file = st.file_uploader("Upload a CSV file with input data", type=["csv"])
@@ -56,3 +56,4 @@ else:
     if st.button("Predict Single"):
         prediction = model.predict(input_data)
         st.success(f"Estimated Insurance Cost: ${prediction[0]:.2f}")
+
